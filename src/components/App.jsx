@@ -17,8 +17,6 @@ export function App () {
 
     const [first, setFirst] = useState(true)
 
-
-
     const addContact = (e) => {
         e.preventDefault()
         const newContact = {
