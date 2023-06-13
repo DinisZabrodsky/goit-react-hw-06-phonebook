@@ -12,8 +12,6 @@ export function App () {
 
     const dispatch = useDispatch()
     const {filter, contacts} = useSelector((state) => state.phonebok)
-    console.log(filter)
-    console.log(contacts)
 
     const [first, setFirst] = useState(true)
 
