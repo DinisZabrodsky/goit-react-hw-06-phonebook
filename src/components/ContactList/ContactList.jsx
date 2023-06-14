@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 // import cssContList from "./ContactList.module.css";
 
 export function ContactList ({contacts, filterValue, getContacts, deleteContact}) {
-    console.log(contacts)
     return(<>
         {filterValue === "" ? contacts.map(el => (
                 <li key={el.id}>
