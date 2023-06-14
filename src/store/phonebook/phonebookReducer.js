@@ -7,7 +7,6 @@ const phonebookSlice = createSlice({
     initialState, 
     reducers: {
         addContactsReducer: (state, { payload }) => {
-            console.log(payload)
             state.contacts.push(payload)
         },
 

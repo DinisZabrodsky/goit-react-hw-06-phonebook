@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage'
 import { phonebookReducer } from "./phonebook/phonebookReducer";
 
 const persistConfigPhonebook = {
-	key: 'phonebook001',
+	key: 'phonebook',
 	storage,
 }
 

@@ -41,7 +41,7 @@ export function App () {
     }
 
     const getContacts = () => {
-        if(filter !== "" && contacts.length !== 0) {
+        if(filter !== "" ) {
             return contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
         }
         
@@ -66,7 +66,9 @@ export function App () {
             <FilterEl onFilter={onFilter} filterValue={filter} />
 
             <ul>
-                <ContactList formContacts={contacts} filterValue={filter} getContacts={getContacts()} deleteContact={deleteContact}/>
+                {contacts.length !== 0 ? 
+                <ContactList contacts={contacts} filterValue={filter} getContacts={getContacts()} deleteContact={deleteContact}/>:
+                <li><p>Список контактів пустий</p></li>}
             </ul>
     </div>
     )
