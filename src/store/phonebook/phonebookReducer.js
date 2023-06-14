@@ -11,7 +11,8 @@ const phonebookSlice = createSlice({
         },
 
         deleteContactsReducer: (state, { payload }) => {
-            state.filter((contact) => contact.id !== payload)
+            const filterList = state.contacts.filter(({id}) => id !== payload)
+            state.contacts = [...filterList]
         },
 
         addFilterReducer: (state, {payload}) => {
