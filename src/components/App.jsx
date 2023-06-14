@@ -41,7 +41,7 @@ export function App () {
     }
 
     const getContacts = () => {
-        if(filter !== "") {
+        if(filter !== "" && contacts.length !== 0) {
             return contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase()))
         }
         
